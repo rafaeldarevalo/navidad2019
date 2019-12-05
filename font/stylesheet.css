@@ -1,0 +1,16 @@
+@font-face {
+    font-family: '212 Dreamery Sans Demo';
+    src: url('212DreamerySansDemo.woff2') format('woff2'),
+        url('212DreamerySansDemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boldey Typeface';
+    src: url('BoldeyTypeface-Regular.woff2') format('woff2'),
+        url('BoldeyTypeface-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
