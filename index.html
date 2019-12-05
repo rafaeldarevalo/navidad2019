@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,83 +8,100 @@
     <title>Navidad LatinMedios 2019</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+
 </head>
+
 <body>
-    <img class="logo" src="img/logoLMWht.png" alt="">
-    <section class="text-intro hide">
-        <div class="container"><h2>Decora tu àrbol <br>de Navidad</h2>
-        <p>Con <strong>LatinMedios</strong> puedes enviar<br>un mensaje de Navidad a tu seres queridos</p>
-        <a href="">Empesar</a>
-        <img class="intro-tree" src="img/tree-1.png" alt=""></div>
-    </section>
-    <section class="customize-tree hide">
-        <h2>Decora tu árbol</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed accusantium. Atque corrupti, iusto voluptatum ut, error officiis veritatis consequuntur hic amet excepturi sunt doloremque repellendus eos culpa cupiditate ea.</p>
-        <div class="customize-tree-col">
-            <div class="item">
+    <div class="wrap">
+        <img class="logo" src="img/logoLMWht.png" alt="">
+        <section class="text-intro js-text-intro">
+            <div class="container">
+                <h2>Decora tu àrbol <br>de Navidad</h2>
+                <p>Con <strong>LatinMedios</strong> puedes enviar<br>un mensaje de Navidad a tu seres queridos</p>
+                <a href="" class="">Empezar</a>
+                <img class="intro-tree" src="img/tree-1.png" alt="">
+            </div>
+        </section>
+        <section class="customize-tree ">
+            <h2>Decora tu árbol</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed accusantium. Atque corrupti,
+                iusto voluptatum ut, error officiis veritatis consequuntur hic amet excepturi sunt doloremque
+                repellendus eos culpa cupiditate ea.</p>
+            <div class="customize-tree-col">
+                <div class="item">
                     <h3>Selecciona un motivo</h3>
                     <div class="tree-option hover"></div>
                     <div class="tree-option hover"></div>
                     <div class="tree-option hover"></div>
+                </div>
+                <div class="item">
+                    <img class="tree-base" src="img/tree-base.png" alt="">
+                </div>
+                <div class="item">
+                    <h3>Agrega los regalos</h3>
+                    <div class="gift-option hover"></div>
+                    <div class="gift-option hover"></div>
+                    <div class="gift-option hover"></div>
+                </div>
             </div>
-            <div class="item">
-                <img class="tree-base" src="img/tree-base.png" alt="">
+            <a href="">Continuar</a>
+        </section>
+        <section class="customize-tree ">
+            <h2>Mensaje personalizado</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed accusantium. Atque corrupti,
+                iusto voluptatum ut, error officiis veritatis consequuntur hic amet excepturi sunt doloremque
+                repellendus eos culpa cupiditate ea.</p>
+            <div class="message-col">
+
+                <div class="item">
+                    <img class="tree-base" src="img/tree-1.png" alt="">
+                </div>
+                <div class="item">
+                    <form action="">
+                        <label for="">De:</label>
+                        <input type="text" placeholder="e-mail">
+                        <label for="">Para:</label>
+                        <input type="text" placeholder="e-mail">
+                        <textarea name="" id="" cols="" rows="" placeholder="Mensaje"></textarea>
+                        <input type="submit" value="Siguiente" class="enviar">
+                    </form>
+
+                </div>
             </div>
-            <div class="item">
-                <h3>Agrega los regalos</h3>
-                <div class="gift-option hover"></div>
-                <div class="gift-option hover"></div>
-                <div class="gift-option hover"></div>
-            </div>
-        </div>
-        <a href="">Continuar</a>
-    </section>
-    <section class="customize-tree hide">
-        <h2>Mensaje personalizado</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed accusantium. Atque corrupti, iusto voluptatum ut, error officiis veritatis consequuntur hic amet excepturi sunt doloremque repellendus eos culpa cupiditate ea.</p>
-        <div class="message-col">
-           
-            <div class="item">
-                <img class="tree-base" src="img/tree-1.png" alt="">
-            </div>
-            <div class="item">
-               <form action="">
-                   <label for="">De:</label>
-                   <input type="text" placeholder="e-mail">
-                   <label for="">Para:</label>
-                   <input type="text" placeholder="e-mail">
-                   <textarea name="" id="" cols="" rows="" placeholder="Mensaje"></textarea>
-                   <input type="submit" value="Siguiente" class="enviar">
-               </form>
-                
-            </div>
-        </div>
-        
-    </section>
-    <section class="customize-tree hide">
-        <h2>De: Nombre </h2>
-        <h2>Para: Nombre</h2>
-        
-        <div class="message-col">
-           
-            <div class="item">
-                <img class="tree-base" src="img/tree-1.png" alt="">
-            </div>
-            <div class="item">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nisi nemo in incidunt obcaecati at quis voluptate odit nulla pariatur totam adipisci fugiat facere animi quo reprehenderit velit, nesciunt sunt?</h2>
+
+        </section>
+        <section class="customize-tree ">
+            <h2>De: Nombre </h2>
+            <h2>Para: Nombre</h2>
+
+            <div class="message-col">
+
+                <div class="item">
+                    <img class="tree-base" src="img/tree-1.png" alt="">
+                </div>
+                <div class="item">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nisi nemo in incidunt
+                        obcaecati at quis voluptate odit nulla pariatur totam adipisci fugiat facere animi quo
+                        reprehenderit velit, nesciunt sunt?</h2>
                     <input type="submit" value="Enviar" class="enviar">
-                
+
+                </div>
             </div>
-        </div>
-        
-    </section>
-    <section class="tpage">
-        <div class="container">
+
+        </section>
+        <section class="tpage">
+            <div class="container">
                 <h2>Mensaje Enviado</h2>
-                <p><strong>LatinMedios</strong> te desea una Feliz Navidad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure qui enim nisi ex reprehends!</p>
+                <p><strong>LatinMedios</strong> te desea una Feliz Navidad. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Tempora iure qui enim nisi ex reprehends!</p>
                 <a href="">Ir al Inicio</a>
-        </div>
-    </section>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

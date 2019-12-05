@@ -26,12 +26,21 @@
 a{
     text-decoration: none;
 }
-body{
+body, html{
     
     color: #fff;
     text-align: center;
     margin: 0;
     padding: 0;
+    height: 100% ;
+    width: 100%;
+}
+.wrap{
+    position: relative;
+	width: 100%;
+	height: 100%;
+	perspective: 1200px;
+    transform-style: preserve-3d;
 }
 h2, h3{
     font-family: '212 Dreamery Sans Demo';
@@ -50,6 +59,7 @@ p{
     top: 30px;
     left: 30px;
     width: 12%;
+    z-index: 9999;
 }
 a, input[type="submit"]{
     padding: 0 50px;
@@ -68,9 +78,52 @@ a, input[type="submit"]{
     // display: none;
 }
 section{
-    padding: 100px 0 ;
-    background: #11222d url('../img/intro-bg.png') no-repeat  center 0;
+    
+    background: #11222d url('../img/intro-bg.png') no-repeat  0;
     background-size: auto;
+	width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // visibility: hidden;
+	// overflow: hidden;
+	// backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    padding: 120px  0;
+    
+    
+	
+}
+.section-current{
+    visibility: visible;
+    animation: scaleUp .7s ease both;
+    
+}
+
+/* scale and fade */
+
+@keyframes scaleDown {
+	to { opacity: 0; transform: scale(.8); }
+}
+
+@keyframes scaleUp {
+	from { opacity: 0; transform: scale(.8); }
+}
+
+@keyframes scaleUpDown {
+	from { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes scaleDownUp {
+	to { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes scaleDownCenter {
+	to { opacity: 0; transform: scale(.7); }
+}
+
+@keyframes scaleUpCenter {
+	from { opacity: 0; transform: scale(.7); }
 }
 
 /* ---------------------------------- INTRO --------------------------------- */
@@ -152,7 +205,6 @@ section{
         background: #000;
         
         margin: 0 auto 30px;
-        z-index: 9999;
         transition: all 1s;
         cursor: pointer;
         
@@ -189,7 +241,6 @@ section{
         background: #000;
         
         margin: 0 auto 30px;
-        z-index: 9999;
         transition: all 1s;
         cursor: pointer;
         
