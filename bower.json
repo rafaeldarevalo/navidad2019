@@ -1,0 +1,20 @@
+{
+  "name": "bower christmas",
+  "homepage": "https://github.com/rafaeldarevalo/navidad2019",
+  "description": "Rafael Arévalo",
+  "main": "",
+  "authors": [
+    "Rafael Arèvalo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "^7.5.2"
+  }
+}

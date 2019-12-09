@@ -37,11 +37,19 @@ body, html {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-h2, h3 {
+h2 {
   font-family: '212 Dreamery Sans Demo';
   font-weight: normal;
   font-style: normal;
-  line-height: 50px; }
+  line-height: 50px;
+  position: relative; }
+
+h3 {
+  font-family: '212 Dreamery Sans Demo';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 10px;
+  position: relative; }
 
 p {
   font-family: 'Open Sans', sans-serif;
@@ -69,20 +77,32 @@ a, input[type="submit"] {
   border: none; }
 
 section {
+  position: absolute;
   background: #11222d url("../img/intro-bg.png") no-repeat 0;
   background-size: auto;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  padding: 120px  0; }
+  transform: translate3d(0, 0, 0); }
 
 .section-current {
   visibility: visible;
   -webkit-animation: scaleUp .7s ease both;
   animation: scaleUp .7s ease both; }
+
+.section-down {
+  visibility: visible;
+  -webkit-animation: scaleDown .7s ease both;
+  animation: scaleDown .7s ease both; }
+
+.hide {
+  display: none; }
 
 /* scale and fade */
 @-webkit-keyframes scaleDown {
@@ -207,6 +227,7 @@ section {
     -ms-flex-positive: 2;
     flex-grow: 2; }
   .customize-tree .customize-tree-col .item:nth-child(2) {
+    position: relative;
     -webkit-box-flex: 4;
     -ms-flex-positive: 4;
     flex-grow: 4; }
@@ -215,7 +236,7 @@ section {
     -ms-flex-positive: 2;
     flex-grow: 2; }
   .customize-tree .customize-tree-col .tree-base {
-    margin: 0 auto; }
+    margin: 0 auto 60px; }
 
 .customize-tree .tree-option {
   width: 100px;
@@ -286,6 +307,15 @@ section {
   transition: all 0.2s ease-in-out;
   border-color: #d8a73d; }
 
+.gift {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+  .gift img {
+    margin: 0 auto; }
+
 /* --------------------------------- MESSAGE -------------------------------- */
 .message-col {
   display: -webkit-box;
@@ -300,7 +330,8 @@ section {
   .message-col h3 {
     font-size: 30px; }
   .message-col .item:nth-child(1) {
-    width: 500%; }
+    width: 500%;
+    position: relative; }
   .message-col .item:nth-child(2) {
     width: 500%; }
   .message-col form {
@@ -314,7 +345,7 @@ section {
       margin-bottom: 10px;
       font-family: '212 Dreamery Sans Demo'; }
     .message-col form input[type="text"] {
-      width: 96%;
+      width: 45%;
       border: none;
       border-radius: 5px;
       padding: 10px 2%;
@@ -335,6 +366,9 @@ section {
       margin-bottom: 20px; }
     .message-col form .enviar {
       width: 100% !important; }
+
+.preview .message-col {
+  margin-top: 200px; }
 
 /* ------------------------------ THANKYOU PAGE ----------------------------- */
 .tpage .container {

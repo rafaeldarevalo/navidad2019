@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Navidad LatinMedios 2019</title>
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -20,13 +16,13 @@
         <img class="logo" src="img/logoLMWht.png" alt="">
         <section class="text-intro js-text-intro">
             <div class="container">
-                <h2>Decora tu àrbol <br>de Navidad</h2>
-                <p>Con <strong>LatinMedios</strong> puedes enviar<br>un mensaje de Navidad a tu seres queridos</p>
-                <a href="" class="">Empezar</a>
+                <h2 id="h2">Decora tu árbol <br>de Navidad</h2>
+                <p>Con <strong>LatinMedios</strong> puedes enviar<br>un mensaje de Navidad personalizado.</p>
+                <a href="#" class="js-empezar" id="myBtn">Empezar</a>
                 <img class="intro-tree" src="img/tree-1.png" alt="">
             </div>
         </section>
-        <section class="customize-tree ">
+        <section class="customize-tree js-customize-tree ">
             <h2>Decora tu árbol</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed accusantium. Atque corrupti,
                 iusto voluptatum ut, error officiis veritatis consequuntur hic amet excepturi sunt doloremque
@@ -34,23 +30,31 @@
             <div class="customize-tree-col">
                 <div class="item">
                     <h3>Selecciona un motivo</h3>
-                    <div class="tree-option hover"></div>
-                    <div class="tree-option hover"></div>
-                    <div class="tree-option hover"></div>
+                    <div class="tree-option hover js-tree-selection" data-name="tree-1" data-id="js-tree-1"></div>
+                    <div class="tree-option hover js-tree-selection" data-name="tree-2" data-id="js-tree-2"></div>
+                    <div class="tree-option hover js-tree-selection" data-name="tree-3" data-id="js-tree-3"></div>
                 </div>
-                <div class="item">
-                    <img class="tree-base" src="img/tree-base.png" alt="">
+                <div class="item ">
+                    <img class="tree-base js-tree-base" src="img/tree-base.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-1 hide" src="img/tree-1.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-2 hide" src="img/tree-2.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-3 hide" src="img/tree-3.png" alt="">
+                    <div class="gift">
+                        <img class="hide js-gift js-gift-1" src="img/gift-1.png " alt="">
+                        <img class="hide js-gift js-gift-2" src="img/gift-2.png " alt="">
+                        <img class="hide js-gift js-gift-3" src="img/gift-3.png " alt="">
+                    </div>
                 </div>
                 <div class="item">
                     <h3>Agrega los regalos</h3>
-                    <div class="gift-option hover"></div>
-                    <div class="gift-option hover"></div>
-                    <div class="gift-option hover"></div>
+                    <div class="gift-option hover js-gift-selection" data-name="gift-1" data-id="js-gift-1"></div>
+                    <div class="gift-option hover js-gift-selection" data-name="gift-2" data-id="js-gift-2"></div>
+                    <div class="gift-option hover js-gift-selection" data-name="gift-3" data-id="js-gift-3"></div>
                 </div>
             </div>
-            <a href="">Continuar</a>
+            <a href="#" class="js-continuar">Continuar</a>
         </section>
-        <section class="customize-tree ">
+        <section class="customize-tree js-mensaje ">
             <h2>Mensaje personalizado</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed accusantium. Atque corrupti,
                 iusto voluptatum ut, error officiis veritatis consequuntur hic amet excepturi sunt doloremque
@@ -58,42 +62,49 @@
             <div class="message-col">
 
                 <div class="item">
-                    <img class="tree-base" src="img/tree-1.png" alt="">
+                    <img class="tree-base js-tree-base" src="img/tree-base.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-1 hide" src="img/tree-1.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-2 hide" src="img/tree-2.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-3 hide" src="img/tree-3.png" alt="">
+                    <div class="gift">
+                        <img class="hide js-gift js-gift-1" src="img/gift-1.png " alt="">
+                        <img class="hide js-gift js-gift-2" src="img/gift-2.png " alt="">
+                        <img class="hide js-gift js-gift-3" src="img/gift-3.png " alt="">
+                    </div>
                 </div>
                 <div class="item">
                     <form action="">
                         <label for="">De:</label>
-                        <input type="text" placeholder="e-mail">
+                        <input type="text" placeholder="Tu nombre" id="nameOne">
+                        <input type="text" placeholder="Tu e-mail" id=emailOne>
                         <label for="">Para:</label>
-                        <input type="text" placeholder="e-mail">
-                        <textarea name="" id="" cols="" rows="" placeholder="Mensaje"></textarea>
-                        <input type="submit" value="Siguiente" class="enviar">
+                        <input type="text" placeholder="Nombre destinatario" id="nameTwo">
+                        <input type="text" placeholder="e-mail destinatario" id="emailTwo">
+                        <textarea name="" id="mssg" cols="" rows="" placeholder="Mensaje"></textarea>
+                        <input type="submit" value="Siguiente" class="enviar js-vermensaje">
                     </form>
 
                 </div>
             </div>
 
         </section>
-        <section class="customize-tree ">
-            <h2>De: Nombre </h2>
-            <h2>Para: Nombre</h2>
-
+        <section class="customize-tree preview js-preview ">
             <div class="message-col">
 
-                <div class="item">
-                    <img class="tree-base" src="img/tree-1.png" alt="">
+                <div class="item js-showTree">
+                   
                 </div>
                 <div class="item">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nisi nemo in incidunt
-                        obcaecati at quis voluptate odit nulla pariatur totam adipisci fugiat facere animi quo
-                        reprehenderit velit, nesciunt sunt?</h2>
-                    <input type="submit" value="Enviar" class="enviar">
+                    <h3 class="js-from"> </h3>
+                    <h3 class="js-to"></h3>
+                    <h2 class="js-mssg"></h2>
+                    <input type="submit" value="Enviar" class="enviar js-enviar">
 
                 </div>
             </div>
 
         </section>
-        <section class="tpage">
+        <section class="tpage js-tpage">
             <div class="container">
                 <h2>Mensaje Enviado</h2>
                 <p><strong>LatinMedios</strong> te desea una Feliz Navidad. Lorem ipsum dolor sit amet consectetur
@@ -102,6 +113,31 @@
             </div>
         </section>
     </div>
-</body>
+    <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCmLKLvwKcr6XfmTW27cm_x4z_DksWh0eg",
+            authDomain: "christmas-2019-45b56.firebaseapp.com",
+            databaseURL: "https://christmas-2019-45b56.firebaseio.com",
+            projectId: "christmas-2019-45b56",
+            storageBucket: "christmas-2019-45b56.appspot.com",
+            messagingSenderId: "644567493593",
+            appId: "1:644567493593:web:2264eb5ea9b3b7f1d247c8",
+            measurementId: "G-Z6E8DDKKS8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
