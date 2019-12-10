@@ -1,5 +1,5 @@
+let data, data2, nameTree, nameGift, uuid;
 $(document).ready(function () {
-    let data, data2, nameTree, nameGift;
 
     $(".js-text-intro").addClass("section-current");
     $(".js-hide").hide();
@@ -11,7 +11,7 @@ $(document).ready(function () {
         $(".js-customize-tree ").addClass("section-current");
     });
 
-
+    $(".js-continuar").hide();
     $(".js-tree-selection").on("click", function (e) {
         e.preventDefault();
         $(".js-tree-base ").hide();
@@ -19,6 +19,11 @@ $(document).ready(function () {
         nameTree = $(this).attr("data-name");
         $("." + data).show();
         console.log("Selected " + nameTree);
+        if ($(".js-gift").is(":visible")) {
+            console.log("gift es visible");
+            $(".js-continuar").fadeIn();
+        }
+
 
 
     });
@@ -29,6 +34,10 @@ $(document).ready(function () {
         nameGift = $(this).attr("data-name");
         $("." + data2).show();
         console.log("Selected " + nameGift);
+        if ($(".js-tree").is(":visible")) {
+            console.log("gift es visible");
+            $(".js-continuar").fadeIn();
+        }
 
     });
     $(".js-continuar").on("click", function (e) {
@@ -40,7 +49,16 @@ $(document).ready(function () {
         $(".js-customize-tree").addClass("section-down");
         $(".js-mensaje ").addClass("section-current");
     });
+
+    $(".js-input").focus(function () {
+        $(".js-required").fadeOut();
+    });
+
+
     $(".js-vermensaje").on("click", function (e) {
+
+
+
 
         e.preventDefault();
         let emailOne = $("#nameOne").val();
@@ -55,6 +73,7 @@ $(document).ready(function () {
             || nameTwo.length == 0
             || mssg.length == 0) {
             console.log("llene todos campos");
+            $(".js-required").fadeIn();
 
 
         }
@@ -63,7 +82,19 @@ $(document).ready(function () {
             var ref = new Firebase("https://christmas-2019-45b56.firebaseio.com/mssg");
             firebase.analytics();
 
+/* ------------------------------ id generator ------------------------------ */
+
+            var d = new Date().getTime();
+            uuid = 'xxxxx4xxxy'.replace(/[xy]/g, function (c) {
+                var r = (d + Math.random() * 16) % 16 | 0;
+                d = Math.floor(d / 16);
+                return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+            });
+
+            console.log(uuid);
+
             ref.push({
+                dataid:  uuid,
                 mailOne: emailOne,
                 mailTwo: emailTwo,
                 nameOne: nameOne,
@@ -80,8 +111,8 @@ $(document).ready(function () {
         }
 
         $(".js-enviar").on("click", function (e) {
-           
-           
+
+
             e.preventDefault();
             $(".js-preview").removeClass("section-current");
             $(".js-preview").addClass("section-down");
@@ -106,24 +137,24 @@ $(document).ready(function () {
     });
 })
 
-var key = "-LvgZE5NkJgHZ1Z1uOW2";
+
 var ref = new Firebase("https://christmas-2019-45b56.firebaseio.com/mssg");
 ref.on("child_added", function (snapshot) {
-    //console.log("El juego actual es ", snapshot.val());
-    // console.log("El id actual es ", snapshot.key());
-    if (snapshot.key() == key) {
+    console.log("El juego actual es ", snapshot.val());
+    console.log("El id actual es ", snapshot.key());
+    if (snapshot.val().dataid == uuid) {
         //console.log("El juego actual es ", snapshot.val());
         var traeDatos = snapshot.val();
         var tree = document.querySelector(".js-showTree");
         var from = document.querySelector(".js-from");
-        var to  = document.querySelector(".js-to");
-        var mssg  = document.querySelector(".js-mssg");
+        var to = document.querySelector(".js-to");
+        var mssg = document.querySelector(".js-mssg");
 
         console.log("tree " + traeDatos.tree);
         tree.innerHTML = '<img class="tree-base" src="img/' + traeDatos.tree + '.png" alt=""> <img class="gift" src="img/' + traeDatos.gift + '.png" alt="">';
         from.innerHTML = "De: " + traeDatos.nameOne;
         to.innerHTML = "Para: " + traeDatos.nameTwo;
-        mssg.innerHTML =  traeDatos.mssg;
+        mssg.innerHTML = traeDatos.mssg;
 
     }
 

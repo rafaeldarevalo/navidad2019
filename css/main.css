@@ -325,15 +325,30 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  width: 80%;
+  width: 50%;
   margin: 0 auto; }
+  .message-col p {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    background: #9a1313;
+    color: #fff;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0; }
   .message-col h3 {
     font-size: 30px; }
   .message-col .item:nth-child(1) {
     width: 500%;
     position: relative; }
   .message-col .item:nth-child(2) {
-    width: 500%; }
+    width: 500%;
+    position: relative;
+    padding-top: 60px; }
   .message-col form {
     width: 100%; }
     .message-col form label {

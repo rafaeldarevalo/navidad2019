@@ -36,9 +36,9 @@
                 </div>
                 <div class="item ">
                     <img class="tree-base js-tree-base" src="img/tree-base.png" alt="">
-                    <img class="tree-base js-tree-base js-tree-1 hide" src="img/tree-1.png" alt="">
-                    <img class="tree-base js-tree-base js-tree-2 hide" src="img/tree-2.png" alt="">
-                    <img class="tree-base js-tree-base js-tree-3 hide" src="img/tree-3.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-1 hide js-tree" src="img/tree-1.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-2 hide js-tree" src="img/tree-2.png" alt="">
+                    <img class="tree-base js-tree-base js-tree-3 hide js-tree" src="img/tree-3.png" alt="">
                     <div class="gift">
                         <img class="hide js-gift js-gift-1" src="img/gift-1.png " alt="">
                         <img class="hide js-gift js-gift-2" src="img/gift-2.png " alt="">
@@ -74,13 +74,14 @@
                 </div>
                 <div class="item">
                     <form action="">
+                        <p class="js-required">Por favor ingresa todos los campos.</p>
                         <label for="">De:</label>
-                        <input type="text" placeholder="Tu nombre" id="nameOne">
-                        <input type="text" placeholder="Tu e-mail" id=emailOne>
+                        <input type="text" placeholder="Tu nombre" id="nameOne" class="js-iput">
+                        <input type="text" placeholder="Tu e-mail" id="emailOne" class="js-iput">
                         <label for="">Para:</label>
-                        <input type="text" placeholder="Nombre destinatario" id="nameTwo">
-                        <input type="text" placeholder="e-mail destinatario" id="emailTwo">
-                        <textarea name="" id="mssg" cols="" rows="" placeholder="Mensaje"></textarea>
+                        <input type="text" placeholder="Nombre destinatario" id="nameTwo" class="js-iput">
+                        <input type="text" placeholder="e-mail destinatario" id="emailTwo" class="js-iput">
+                        <textarea name="" id="mssg" cols="" rows="" placeholder="Mensaje" class="js-iput" ></textarea>
                         <input type="submit" value="Siguiente" class="enviar js-vermensaje">
                     </form>
 
